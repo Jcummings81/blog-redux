@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { incId } from '../actions/nextId';
+import { addBlog } from '../actions/blogs';
 
 class BlogForm extends React.Component {
     state = { name: ''}
@@ -9,8 +11,8 @@ class BlogForm extends React.Component {
         const { dispatch, id } = this.props
         const { name } = this.state
         const blog = { name, id, liked: false }
-        dispatch({ type: 'ADD_BLOG', blog })
-        dispatch({ type: 'INC_ID'})
+        dispatch(addBlog(blog))
+        dispatch(incId())
         this.setState({ name: '' })
     }
 

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BlogForm from './components/BlogForm'
+import BlogList from './components/BlogList'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        const App = () => ( 
+      <fragment>
     <BlogForm />
     <BlogList />
     <Footer />
-      </div>
+    </fragment>
     );
   }
 }
